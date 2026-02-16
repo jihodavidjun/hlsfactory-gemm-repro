@@ -1,0 +1,10 @@
+# Tool-generated bulk (kept locally but ignored if re-run)
+**/hls_prj/
+**/logs/
+
+# Python noise
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store

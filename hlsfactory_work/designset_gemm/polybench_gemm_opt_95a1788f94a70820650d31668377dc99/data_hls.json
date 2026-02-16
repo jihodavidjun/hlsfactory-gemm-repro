@@ -1,0 +1,14 @@
+{
+    "clock_period": 7.2720000000000005e-09,
+    "latency_best_cycles": 1054754,
+    "latency_best_seconds": 0.0076701710880000004,
+    "latency_average_cycles": 1054754,
+    "latency_average_seconds": 0.0076701710880000004,
+    "latency_worst_cycles": 1054754,
+    "latency_worst_seconds": 0.0076701710880000004,
+    "resources_lut_used": 3766,
+    "resources_ff_used": 3663,
+    "resources_dsp_used": 10,
+    "resources_bram_used": 40,
+    "resources_uram_used": 0
+}

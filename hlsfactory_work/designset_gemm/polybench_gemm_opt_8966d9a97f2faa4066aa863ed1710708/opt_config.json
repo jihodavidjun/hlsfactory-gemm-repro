@@ -1,0 +1,10 @@
+{
+    "static_lines": "set_directive_resource -core RAM_1P \"gemm\" A\nset_directive_resource -core RAM_1P \"gemm\" B\nset_directive_resource -core RAM_1P \"gemm\" C\nset_directive_interface -mode ap_fifo \"gemm\" D_out\n",
+    "array_partition_lines": [
+        "set_directive_array_partition -type cyclic -factor 8 -dim 2 \"gemm\" A\nset_directive_array_partition -type cyclic -factor 8 -dim 2 \"gemm\" B\nset_directive_array_partition -type cyclic -factor 8 -dim 2 \"gemm\" C\nset_directive_array_partition -type cyclic -factor 8 -dim 2 \"gemm\" D_out\nset_directive_array_partition -type cyclic -factor 8 -dim 2 \"gemm\" buff_A\nset_directive_array_partition -type cyclic -factor 8 -dim 2 \"gemm\" buff_B\nset_directive_array_partition -type cyclic -factor 8 -dim 2 \"gemm\" buff_C\nset_directive_array_partition -type cyclic -factor 8 -dim 2 \"gemm\" buff_D_out\nset_directive_array_partition -type cyclic -factor 8 -dim 2 \"gemm\" tmp1\nset_directive_unroll -factor 8 \"gemm/lprd_2\"\nset_directive_unroll -factor 8 \"gemm/lpwr_2\"\n\n\nset_directive_pipeline \"gemm/lprd_2\"\nset_directive_pipeline \"gemm/lpwr_2\"\n\n"
+    ],
+    "loop_opt_lines": [
+        "set_directive_pipeline gemm/lp2\nset_directive_unroll -factor 4 gemm/lp2\n",
+        "set_directive_unroll -factor 8 gemm/lp5\n"
+    ]
+}

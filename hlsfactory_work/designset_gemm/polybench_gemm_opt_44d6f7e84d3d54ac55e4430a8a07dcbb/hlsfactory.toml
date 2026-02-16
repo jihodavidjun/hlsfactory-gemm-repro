@@ -1,0 +1,10 @@
+design_name = "polybench_gemm"
+dataset_name = "polybench"
+top = "gemm"
+language = "c"
+platform = "xilinx"
+
+
+[[flow_configs]]
+flow_name = "VitisHLSSynthFlow"
+synth_tcl = "dataset_hls.tcl"

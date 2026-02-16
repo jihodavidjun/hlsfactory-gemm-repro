@@ -1,0 +1,10 @@
+{
+    "static_lines": "set_directive_resource -core RAM_1P \"gemm\" A\nset_directive_resource -core RAM_1P \"gemm\" B\nset_directive_resource -core RAM_1P \"gemm\" C\nset_directive_interface -mode ap_fifo \"gemm\" D_out\n",
+    "array_partition_lines": [
+        ""
+    ],
+    "loop_opt_lines": [
+        "set_directive_pipeline gemm/lp2\nset_directive_unroll -factor 1 gemm/lp2\n",
+        "set_directive_unroll -factor 8 gemm/lp5\n"
+    ]
+}
