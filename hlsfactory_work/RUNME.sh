@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# 1) Load Xilinx environment (adjust version if needed)
+# 1) Load Xilinx environment
 source /tools/software/xilinx/setup_env.sh
 export RDI_DATADIR=/tools/software/xilinx/2025.1.1/Vivado/data
 
-# 2) Make sure python can import HLSFactory (assumes repo exists at ~/HLSFactory)
+# 2) Make sure python can import HLSFactory
 export PYTHONPATH="$HOME/HLSFactory:$PYTHONPATH"
 
 # 3) Run stages (from inside hlsfactory_work)
